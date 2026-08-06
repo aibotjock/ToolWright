@@ -1,0 +1,75 @@
+name: MCP server idea
+description: Propose an MCP server worth building, or a template candidate
+labels: ["idea", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Read this first
+
+        **GitHub issues are public.** Anything you post here can be read,
+        copied, and used by anyone.
+
+        - Do not post an idea you intend to keep confidential.
+        - Do not post an idea you intend to patent.
+        - Do not post client names, internal API details, or business
+          information you are not free to share.
+
+        If you want to keep an idea private, use the local idea vault in the
+        application. Vault entries are private by default, stay on your machine,
+        and are never published automatically.
+
+        ## What submitting means
+
+        You keep ownership of your idea. Submitting it here is not an assignment
+        of rights and not a licence grant beyond public discussion in this
+        thread. Nothing becomes a project template without a separate, explicit,
+        written opt-in from you.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this MCP server solve
+    validations:
+      required: true
+
+  - type: textarea
+    id: tools
+    attributes:
+      label: What tools, resources, or prompts would it expose
+    validations:
+      required: true
+
+  - type: textarea
+    id: integrations
+    attributes:
+      label: What would it integrate with
+      description: |
+        External APIs, local services, databases, files. If an API is involved,
+        link its **official** documentation. Inferred or reverse-engineered API
+        behaviour cannot be treated as documented and will mark the integration
+        unresolved.
+
+  - type: dropdown
+    id: operations
+    attributes:
+      label: Does it write, or only read
+      options:
+        - Read-only
+        - Read and write
+        - Includes destructive or irreversible operations
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmations
+      options:
+        - label: This idea is mine to share publicly, and I am not posting anything confidential
+          required: true
+        - label: I understand this issue is public and permanently visible
+          required: true
+        - label: I am open to this being considered as a template candidate, subject to a separate written agreement
+          required: false

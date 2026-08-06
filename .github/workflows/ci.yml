@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: LICENSE exists and is unmodified
+        run: |
+          if [ ! -s LICENSE ]; then
+            echo "LICENSE is missing or empty."
+            echo "Run: ./scripts/bootstrap-license-texts.sh"
+            exit 1
+          fi
+          sha256sum -c docs/license-texts.sha256
+
+      - name: No committed secrets or machine identifiers
+        run: bash scripts/check-secrets.sh
+
+      # Expected to FAIL until the copyright holder is set. That is deliberate:
+      # a passing check here today would mean the check does not work.
+      - name: Release-blocking placeholders
+        continue-on-error: true
+        run: bash scripts/check-placeholders.sh

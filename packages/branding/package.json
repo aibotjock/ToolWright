@@ -1,0 +1,13 @@
+{
+  "name": "@toolwright/branding",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Centralized branding, legal identity, and placeholder registry. Single source of truth for every user-visible name in the platform.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

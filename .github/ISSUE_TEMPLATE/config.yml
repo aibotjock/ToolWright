@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/aibotjock/ToolWright/security/advisories/new
+    about: Report privately. Never open a public issue for a vulnerability.
+  - name: Question or design discussion
+    url: https://github.com/aibotjock/ToolWright/discussions
+    about: Open-ended questions and design debate belong in Discussions.
+  - name: Sponsor this project
+    url: https://github.com/sponsors/aibotjock
+    about: The project is free under Apache-2.0. Sponsorship funds its maintenance.

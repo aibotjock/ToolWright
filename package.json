@@ -1,0 +1,22 @@
+{
+  "name": "toolwright",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Build MCP servers without writing one.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check:placeholders": "bash scripts/check-placeholders.sh",
+    "check:secrets": "bash scripts/check-secrets.sh",
+    "check:license": "sha256sum -c docs/license-texts.sha256",
+    "check": "npm run check:license && npm run check:placeholders && npm run check:secrets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aibotjock/ToolWright.git"
+  },
+  "keywords": ["mcp", "model-context-protocol", "code-generation", "cli"]
+}

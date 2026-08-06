@@ -1,0 +1,23 @@
+# Funding options for Toolwright
+#
+# Only channels that actually exist are listed. Placeholder or aspirational
+# funding links are worse than none: they signal a project that overstates
+# itself.
+#
+# GitHub Sponsors must be enabled on the account before this renders. If it is
+# not yet enabled, this line is inert rather than broken.
+github: [aibotjock]
+
+# Additional funding routes, deliberately not yet configured:
+#
+#   Commercial licensing  -> Not applicable. The project is Apache-2.0; there is
+#                            no licence to sell. See docs/MONETIZATION.md.
+#
+#   Paid implementation / support
+#                         -> Not offered yet. Do not advertise a service that
+#                            cannot currently be delivered.
+#
+#   Hosted service        -> Does not exist. The local application is the
+#                            product. See docs/WEBSITE_ROADMAP.md.
+#
+# custom: []   # intentionally empty until a real URL exists

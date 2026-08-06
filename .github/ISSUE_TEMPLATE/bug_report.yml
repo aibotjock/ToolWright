@@ -1,0 +1,90 @@
+name: Bug report
+description: Something behaves incorrectly
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing: please make sure this is not a security vulnerability.
+        If it is, report it privately instead — see SECURITY.md.
+
+        **Do not paste API keys, tokens, or credentials into this issue.**
+        Redact them from logs before pasting.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed, not what you think caused it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps. If you cannot reproduce it reliably, say so — intermittent bugs are still worth reporting.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area
+      options:
+        - Installation or setup
+        - Web interface
+        - CLI
+        - Specification / feasibility review
+        - Code generation
+        - Sandbox or testing
+        - Generated project (build or runtime)
+        - Export
+        - AI provider (local or hosted)
+        - Idea vault
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "v0.1.0, or commit SHA"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        OS and version, Node version, pnpm version, whether Docker is available.
+        Please do not include hostnames, usernames, or absolute paths that
+        identify your machine — replace them with placeholders.
+      placeholder: |
+        OS:
+        Node:
+        pnpm:
+        Docker available: yes / no
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Logs or error messages. Redact all secrets first.
+      render: shell

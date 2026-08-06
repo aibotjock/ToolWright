@@ -1,0 +1,45 @@
+name: Feature request
+description: Suggest a capability or improvement to the platform
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is for changes to **Toolwright itself**.
+
+        If you have an idea for an MCP *server* you would like to build with it,
+        use the "MCP server idea" template instead.
+
+        Note that the primary workflow — idea to specification to generation to
+        test to export — takes priority over all secondary features until it is
+        reliable end to end. Requests for marketplace, billing, team, or hosted
+        features will be recorded but not implemented yet.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: Describe the problem, not your preferred solution. What are you unable to do today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you have in mind
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you have tried or considered
+      description: Including workarounds, and why they are not sufficient.
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This relates to the core workflow rather than a hosted, billing, or team feature
+          required: false
