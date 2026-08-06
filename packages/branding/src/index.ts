@@ -74,11 +74,7 @@ export const LEGAL = {
    * support a commercial contracting party. It should still be a real,
    * identifiable person or entity. A pseudonym is acceptable.
    */
-  copyrightHolder: placeholder(
-    'LEGAL_OWNER',
-    'Copyright holder name for LICENSE, NOTICE, and SPDX headers.',
-    'Supply the name to appear in NOTICE and SPDX headers. A pseudonym is acceptable under a permissive license.',
-  ),
+  copyrightHolder: 'aibotjock',
 
   /** First year of publication, used in the copyright notice range. */
   copyrightYear: 2026,
@@ -140,7 +136,7 @@ export const FUNDING = {
 // ---------------------------------------------------------------------------
 
 /** Every placeholder in the project. Consumed by the release-blocker check. */
-export const ALL_PLACEHOLDERS: readonly Placeholder[] = [LEGAL.copyrightHolder];
+export const ALL_PLACEHOLDERS: readonly Placeholder[] = [LEGAL.copyrightHolder].filter(isPlaceholder);
 
 /** Placeholders that must be resolved before a public release may be cut. */
 export const unresolvedBlockingPlaceholders = (): readonly Placeholder[] =>
